@@ -2,6 +2,54 @@
 /*Cada servidor de internet tiene una normalización inicial en estilos. Si nosotros programamos un estilo, el navegador va a tomar nuestro estilo lo normal, al cargar la página.*/
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap"); /*Esta familia tipografica que importamos lo hicimos desde google fonts*/
 
+/*MIGRACIÓN DE SISTEMA DE DISEÑO A CSS CON VARIABLES.*/
+:root /*Colocando :root podemos crear variables, las mismas nos servirán para poder establecer ciertos valores que utilizaremos con frecuencia en nuestra hoja de estilos. Por ejemplo crear una variable llamada "color-base-backgraound" y esa variable va a guardar el valor del color gris. Entonces cada que quiera colocar un color color de fondo. No va a ser necesario colocar "gris", ahora podremos colocar "color-base-background". COmo esta variable tiene guradado el color "gris", al ser utilizada, el resultado final va a ser el mismo. El uso de variables es una muy buena práctica debido a que, si cambiamos el valor de la variable automaticamente va a cambiar el valor de todas las etiquetas que utilizaron el color "color-base.background". Para crear una variable debemos colocar 2 guiones altos seguidos y luego de eso el nombre de nuestra variable, próximo a esto, colocamos 2 puntos y le asignamos el valor que queremos que guarde.*/ {
+  /*Paleta de Colores*/
+  --primary-solid: #ff3333; /*Si colocamos el color en "rgb" podremos agregarle transparencia, como en el siguiente caso: */
+  --primary-900: rgb(255, 51, 51, 0.9);
+  /*En este caso, el color utilizado ese el mismo de "primary-solid" con la diferencia que se le está aplicado una transparencia del 90%. Repetiremos los mismo, aplicando transparencias de 50% y 30% */
+  --primary-500: rgb(255, 51, 51, 0.5);
+  --primary-300: rgb(255, 51, 51, 0.3);
+
+  --secondary-solid: #1d84b5;
+  --secondary-900: rgb(29, 132, 181, 0.9);
+  --secondary-500: rgb(29, 132, 181, 0.5);
+  --secondary-300: rgb(29, 132, 181, 0.3);
+
+  --dark-solid: #1f1f1f;
+  --dark-900: rgb(31, 31, 31, 0.9);
+  --dark-500: rgb(31, 31, 31, 0.5);
+  --dark-300: rgb(31, 31, 31, 0.3);
+
+  --dark-bg-solid: #30343f;
+  --light-bg-solid: #fafaff;
+  --light-font-solid: #ffffff;
+
+  /*Tipografía*/
+  --base-font: "Inter", sans-serif;
+  --alternative-font: "Raleway", sans-serif;
+
+  /*Font-sizes*/
+  --font-sizes: 4.6em;
+  --font-jumbo: 3.8em;
+  --font-xlarge: 3em;
+  --font-large: 2.4em;
+  --font-medium: 1.8em;
+  --font-small: 1.6em;
+  --font-xsmal: 1.4em;
+
+  /*Espacios*/
+  --spacing-128: 12.8rem; /*Para los espacios se utiliza la unidad de medida rem. Tambien puede utilizarse la unidad de medida "px" pero es una muy buena práctica utilizar los "rem" y "em". Con el avance del proyecto vamos a seguir entendiendo mucho mas.*/
+  --spacing-68: 6.8rem;
+  --spacing-36: 3.6rem;
+  --spacing-28: 2.8rem;
+  --spacing-24: 2.4rem;
+  --spacing-18: 1.8rem;
+  --spacing-16: 1.6rem;
+  --spacing-12: 1.2rem;
+  --spacing-8: 0.8rem;
+}
+
 *,
 *::before,
 *::after {
@@ -11,9 +59,11 @@
 }
 
 html {
-  font-family: "Inter", sans-serif; /*Colocamos la fuente "inter" que improtamos desde google font*/
-  font-size: 62, 5%; /*Porque se utiliza este valor para todos los elementos que se encuentren dentro de la etiqueta HTML? Porque el tamaño por defecto en los servidores de las letras es de 16px. Es una muy buena practica utilizar las unidades "em" para los tamaños de las letras (Cuando se vea "responsive" va a tomar sentido). Y un dato curioso es que 16px = 1em , por ende, si yo quiero colocar en unidad de "em" 18px por ejemplo, debería hacer una regla de 3 simple. Pero para evitar todo este conteo, podemos "hackear" el valor de 16px por defecto de los servidores y llevarlo a 10px, ya que es mucho mas fácil hacer cuenta con el número 10. La forma de hackearlo es colocando la propiedad "font-size" dentro de la etiqueta html y asignarle el valor "62,5%" que equivale a 10px.*/
-  color: #111111;
+  font-family: var(
+    --base-font
+  ); /*Colocamos la fuente "inter" que improtamos desde google font*/
+  font-size: 62.5%; /*Porque se utiliza este valor para todos los elementos que se encuentren dentro de la etiqueta HTML? Porque el tamaño por defecto en los servidores de las letras es de 16px. Es una muy buena practica utilizar las unidades "em" para los tamaños de las letras (Cuando se vea "responsive" va a tomar sentido). Y un dato curioso es que 16px = 1em , por ende, si yo quiero colocar en unidad de "em" 18px por ejemplo, debería hacer una regla de 3 simple. Pero para evitar todo este conteo, podemos "hackear" el valor de 16px por defecto de los servidores y llevarlo a 10px, ya que es mucho mas fácil hacer cuenta con el número 10. La forma de hackearlo es colocando la propiedad "font-size" dentro de la etiqueta html y asignarle el valor "62,5%" que equivale a 10px. Antes estaba colocado el nombre de la fuente, ahora colocamos el nombre de la variable, debido a que es mucho mas práctico.*/
+  color: var(--dark-solid);
 }
 
 a {
@@ -25,8 +75,10 @@ a {
 
 header,
 footer {
-  font-family: "Raleway", sans-serif;
-  color: white; /*Se coloca este color en el header y footer para todas las letras /textos que se encuentren dentro. Ya que la página web que tenemos que crear tiene de color de background, el gris.*/
+  font-family: var(--alternative-font);
+  color: var(
+    --light-font-solid
+  ); /*Se coloca este color en el header y footer para todas las letras /textos que se encuentren dentro. Ya que la página web que tenemos que crear tiene de color de background, el gris.*/
 }
 
 ul,
