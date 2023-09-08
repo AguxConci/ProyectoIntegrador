@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Edit</title>
+    <link rel="stylesheet" href="assets/style.css" />
   </head>
   <body>
     <header>
-      <nav>
-        <picture>
+      <nav class="navbar container">
+        <picture class="nav_logo">
           <a href="#">
             <img
               src="img/branding/logo_light_horizontal.svg"
@@ -16,14 +17,15 @@
             />
           </a>
         </picture>
-
-        <a href="#">VER TIENDA</a>
-        <a href="#">ADMIN</a>
-        <a href="#">SALIR</a>
+        <ul class="nav_item">
+          <li><a href="#" id="">VER TIENDA</a></li>
+          <li><a href="#" id="">ADMIN</a></li>
+          <li><a href="#" id="">SALIR</a></li>
+        </ul>
       </nav>
     </header>
 
-    <main>
+    <main class="container">
       <h3>EDITAR ITEM</h3>
 
       <label for="">Categoría:</label>

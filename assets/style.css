@@ -1,0 +1,62 @@
+/*NORMALIZACIÓN INICIAL*/
+/*Cada servidor de internet tiene una normalización inicial en estilos. Si nosotros programamos un estilo, el navegador va a tomar nuestro estilo lo normal, al cargar la página.*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap"); /*Esta familia tipografica que importamos lo hicimos desde google fonts*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*content-box modifica el padding hacia afuera de la caja. border-box lo agrega hacia adentro de la caja. */
+}
+
+html {
+  font-family: "Inter", sans-serif; /*Colocamos la fuente "inter" que improtamos desde google font*/
+  font-size: 62, 5%; /*Porque se utiliza este valor para todos los elementos que se encuentren dentro de la etiqueta HTML? Porque el tamaño por defecto en los servidores de las letras es de 16px. Es una muy buena practica utilizar las unidades "em" para los tamaños de las letras (Cuando se vea "responsive" va a tomar sentido). Y un dato curioso es que 16px = 1em , por ende, si yo quiero colocar en unidad de "em" 18px por ejemplo, debería hacer una regla de 3 simple. Pero para evitar todo este conteo, podemos "hackear" el valor de 16px por defecto de los servidores y llevarlo a 10px, ya que es mucho mas fácil hacer cuenta con el número 10. La forma de hackearlo es colocando la propiedad "font-size" dentro de la etiqueta html y asignarle el valor "62,5%" que equivale a 10px.*/
+  color: #111111;
+}
+
+a {
+  text-decoration: none; /*Le saca a las etiquetas anclas su "decoración" por defecto, por ejemplo, el subrayado.*/
+  font-size: 2em; /*Se determina el tamaño de la letra de todas las etiquetas anclas*/
+  color: inherit; /*Se determina el color de letra de todas las etiquetas anclas. Antes estaba colocado #111111, pero ahora color tiene el valor de inherit, lo que hace este valor es tomar el color heredado por su etiqueta padre, que es la etiqueta html. */
+  font-family: inherit;
+}
+
+header,
+footer {
+  font-family: "Raleway", sans-serif;
+  color: white; /*Se coloca este color en el header y footer para todas las letras /textos que se encuentren dentro. Ya que la página web que tenemos que crear tiene de color de background, el gris.*/
+}
+
+ul,
+ol {
+  list-style-type: none; /*Le sacamos los estilos por defecto a las listas*/
+}
+
+p {
+  font-size: 1.8em;
+}
+
+/*---------- Acá termina la normalización Inicial---------------*/
+
+.container {
+  max-width: 1200px; /*Configuro que todo lo que tenga la clase "container, va a entrar en un ancho maximo de 1200px" */
+  margin: 0 auto; /*Los 1200px van a quedar centrados debido al margen de 0 auto. que dice que se va a acomodar al sobrante que le quede de pantalla, descontando los 1200px"*/
+}
+
+header {
+  background-color: #30343f;
+}
+
+.navbar /*Se utiliza este nombre para las barras de navegación "bar = barra" y "nav = navegar".*/ {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 144px;
+}
+
+.nav_item {
+  display: flex;
+  list-style: none;
+}
