@@ -36,7 +36,7 @@
   --font-large: 2.4em;
   --font-medium: 1.8em;
   --font-small: 1.6em;
-  --font-xsmal: 1.4em;
+  --font-xsmall: 1.4em;
 
   /*Espacios*/
   --spacing-128: 12.8rem; /*Para los espacios se utiliza la unidad de medida rem. Tambien puede utilizarse la unidad de medida "px" pero es una muy buena práctica utilizar los "rem" y "em". Con el avance del proyecto vamos a seguir entendiendo mucho mas.*/
@@ -73,14 +73,6 @@ a {
   font-family: inherit;
 }
 
-header,
-footer {
-  font-family: var(--alternative-font);
-  color: var(
-    --light-font-solid
-  ); /*Se coloca este color en el header y footer para todas las letras /textos que se encuentren dentro. Ya que la página web que tenemos que crear tiene de color de background, el gris.*/
-}
-
 ul,
 ol {
   list-style-type: none; /*Le sacamos los estilos por defecto a las listas*/
@@ -90,25 +82,132 @@ p {
   font-size: 1.8em;
 }
 
+img {
+  width: 100%; /*Esto se coloca para normalizar a todas las imagenes que se agregen a nuestro documento HTML. Es decir, el 100% corresponde al valor maximo colocado por la etiqueta padre de donde se encuentra nuestra etiqueta "img".*/
+}
+
+button {
+  width: 100%;
+}
 /*---------- Acá termina la normalización Inicial---------------*/
 
 .container {
   max-width: 1200px; /*Configuro que todo lo que tenga la clase "container, va a entrar en un ancho maximo de 1200px" */
-  margin: 0 auto; /*Los 1200px van a quedar centrados debido al margen de 0 auto. que dice que se va a acomodar al sobrante que le quede de pantalla, descontando los 1200px"*/
-}
+  margin: 0 auto;
+} /*Los 1200px van a quedar centrados debido al margen de 0 auto. que dice que se va a acomodar al sobrante que le quede de pantalla, descontando los 1200px"*/
 
 header {
-  background-color: #30343f;
+  font-family: var(--alternative-font);
+  color: var(
+    --light-font-solid
+  ); /*Se coloca este color en el header y footer para todas las letras /textos que se encuentren dentro. Ya que la página web que tenemos que crear tiene de color de background, el gris.*/
+  background-color: var(--dark-bg-solid);
+  padding: var(--spacing-36);
 }
 
-.navbar /*Se utiliza este nombre para las barras de navegación "bar = barra" y "nav = navegar".*/ {
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 144px;
 }
 
-.nav_item {
+.navbar__logo {
+  width: 300px;
+}
+
+.navbar__menu {
   display: flex;
-  list-style: none;
+  gap: var(--spacing-68);
+}
+
+.navbar__item {
+  font-size: var(--font-xsmall);
+}
+
+.edit {
+  padding: var(--spacing-28);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.edit__title {
+  font-size: var(--font-xlarge);
+}
+
+.edit__item {
+  display: flex;
+  gap: var(--spacing-128);
+}
+
+.edit__item__categoria,
+.edit__item__licencia {
+  display: flex;
+  gap: var(--spacing-12);
+  align-items: center;
+}
+
+.edit__opciones {
+  font-size: var(--font-medium);
+  width: 204px;
+  height: 44px;
+  font-weight: bold;
+}
+
+.font-size-24px {
+  font-size: var(--font-medium);
+}
+
+.control__item {
+  max-width: 660px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.img-productos {
+  width: 150px;
+  display: flex;
+}
+
+.button {
+  width: 175px;
+  padding: 12px;
+  border: none;
+  background-color: var(--primary-solid);
+  color: var(--light-font-solid);
+}
+
+.button:hover {
+  background-color: var(--dark-bg-solid);
+}
+
+footer {
+  font-family: var(--alternative-font);
+  color: var(
+    --light-font-solid
+  ); /*Se coloca este color en el header y footer para todas las letras /textos que se encuentren dentro. Ya que la página web que tenemos que crear tiene de color de background, el gris.*/
+  background-color: var(--dark-bg-solid);
+  padding: var(--spacing-128);
+}
+.navbar_footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar_footer__menu {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-xsmall);
+}
+
+.navbar_footer__isotipo {
+  width: 143px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.derecho-autor {
+  display: flex;
+  align-items: flex-end;
+  font-size: var(--font-xsmall);
 }

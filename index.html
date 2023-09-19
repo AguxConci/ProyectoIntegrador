@@ -9,7 +9,8 @@
   <body>
     <header>
       <nav class="navbar container">
-        <picture class="nav_logo">
+        <!--Se utiliza este nombre para las barras de navegación "bar = barra" y "nav = navegar".-->
+        <picture class="navbar__logo">
           <a href="#">
             <img
               src="img/branding/logo_light_horizontal.svg"
@@ -17,86 +18,116 @@
             />
           </a>
         </picture>
-        <ul class="nav_item">
-          <li><a href="#" id="">VER TIENDA</a></li>
-          <li><a href="#" id="">ADMIN</a></li>
-          <li><a href="#" id="">SALIR</a></li>
+        <ul class="navbar__menu">
+          <li class="navbar__item"><a href="#" id="">VER TIENDA</a></li>
+          <li class="navbar__item"><a href="#" id="">ADMIN</a></li>
+          <li class="navbar__item"><a href="#" id="">SALIR</a></li>
         </ul>
       </nav>
     </header>
 
-    <main class="container">
-      <h3>EDITAR ITEM</h3>
+    <main class="edit container">
+      <h3 class="edit__title">EDITAR ITEM</h3>
 
-      <label for="">Categoría:</label>
-      <select name="" id="">
-        <option value="">Figuras</option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-      </select>
+      <div class="edit__item">
+        <div class="edit__item__categoria">
+          <label for="" class="font-size-24px">Categoría:</label>
+          <select name="" id="" class="edit__opciones">
+            <option value="">Figuras1</option>
+            <option value="">Figuras2</option>
+            <option value="">Figuras3</option>
+            <option value="">Figuras4</option>
+          </select>
+        </div>
+        <div class="edit__item__licencia">
+          <label for="" class="font-size-24px">Licencia:</label>
+          <select name="" id="" class="edit__opciones">
+            <option value="">Naruto Shipudden1</option>
+            <option value="">Naruto Shipudden2</option>
+            <option value="">Naruto Shipudden3</option>
+            <option value="">Naruto Shipudden4</option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <label for="" class="font-size-24px">Nombre del producto:</label>
+        <input type="text" />
+      </div>
+      <textarea
+        class="edit__textarea font-size-24px"
+        name=""
+        id=""
+        cols="60"
+        rows="10"
+      >
+holis</textarea
+      >
 
-      <label for="">Licencia:</label>
-      <select name="" id="">
-        <option value="">Naruto Shipudden</option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-      </select>
-      <br /><br /><br />
-      <label for="">Nombre del producto:</label>
-      <input type="text" />
-      <br /><br /><br />
+      <div class="font-size-24px control__item">
+        <div>
+          <label for="sku">SKU:</label>
+          <input type="text" id="sku" name="sku" />
+        </div>
+        <div>
+          <label for="precio">Precio:</label>
+          <input type="text" id="precio" name="precio" />
+        </div>
+        <div>
+          <label for="stock">Stock:</label>
+          <input type="text" id="stock" name="stock" />
+        </div>
+      </div>
+      <div class="font-size-24px">
+        <label for="descuento">Descuento:</label>
+        <input type="text" id="descuento" name="descuento" />
+        <label for="cuotas">Cuotas:</label>
+        <select name="cuotas" id="cuotas">
+          <option value="">3 cuotas sin interés</option>
+          <option value="">6 cuotas sin interés</option>
+          <option value="">12 cuotas sin interés</option>
+        </select>
+      </div>
 
-      <textarea name="" id="" cols="60" rows="10"></textarea>
-
-      <br /><br /><br />
-      <label for="sku">SKU:</label>
-      <input type="text" id="sku" name="sku" />
-
-      <label for="precio">Precio:</label>
-      <input type="text" id="precio" name="precio" />
-
-      <label for="stock">Stock:</label>
-      <input type="text" id="stock" name="stock" />
-      <br /><br /><br />
-      <label for="descuento">Descuento:</label>
-      <input type="text" id="descuento" name="descuento" />
-      <label for="cuotas">Cuotas:</label>
-      <select name="cuotas" id="cuotas">
-        <option value="">3 cuotas sin interés</option>
-        <option value="">6 cuotas sin interés</option>
-        <option value="">12 cuotas sin interés</option>
-      </select>
-      <br /><br /><br />
-      <label for="">Imagenes:</label>
-      <input type="file" imagenes />
-      <br /><br />
-      <picture>
-        <img
-          src="img/pokemon/charmander-box.webp"
-          alt="imagencharmonder-box-web"
-        />
-        <figcaption>Frente</figcaption>
-      </picture>
-      <picture>
-        <img
-          src="img/star-wars/bobbafeth-box.webp"
-          alt="iamgen star-wars bobbafeth"
-        />
-        <figcaption>Dorso</figcaption>
-      </picture>
-      <br /><br /><br />
-      <button>Modificar Producto</button>
+      <div class="font-size-24px">
+        <label for="">Imágenes:</label>
+        <input type="file" imagenes />
+      </div>
+      <div class="img-productos">
+        <picture>
+          <img
+            src="img/pokemon/charmander-box.webp"
+            alt="imagencharmonder-box-web"
+          />
+          <figcaption>Frente</figcaption>
+        </picture>
+        <picture>
+          <img
+            src="img/star-wars/bobbafeth-box.webp"
+            alt="iamgen star-wars bobbafeth"
+          />
+          <figcaption>Dorso</figcaption>
+        </picture>
+      </div>
+      <div>
+        <button class="button">Modificar Producto</button>
+      </div>
     </main>
 
     <footer>
-      <nav>
+      <div class="container navbar_footer ">
+      <nav class=" navbar_footer__menu">
         <a href="#">SHOP</a>
         <a href="#">REGISTRARSE</a>
         <a href="#">INGRESAR</a>
         <a href="#">CONTACTO</a>
       </nav>
+      <p class="derecho-autor">All rights reserved 2022 - Funkoshop &ampcopy;</p>
+      <picture class="navbar_footer__isotipo">
+        <img src="img/branding/isotype.svg" alt="isotipo logo" />
+      </picture>
+      </div>
+
+      
     </footer>
   </body>
 </html>
