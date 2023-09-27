@@ -1,0 +1,16 @@
+
+*{
+background-color: white;
+margin: 0;
+}
+
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    width: 431px;
+    height: 49px;
+}
+
+.categoria {
+position: absolute;
+}

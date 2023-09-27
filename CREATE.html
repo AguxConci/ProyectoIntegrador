@@ -2,9 +2,12 @@
 <html lang="es">    
   <head>
     <link rel="stylesheet" type="text/css" href="CREATE.CSS">
-     <meta charset="UTF-8" />
-     <meta autor="Agus"
-     <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta autor="Agus"
+   <title></title>
 </head>
   <header>
     Lo que vaya aca 
@@ -15,49 +18,67 @@
 
     <form action="nowhere" method="post" target="_self">
 
-         <label for="categoria">Categoria:</label>
-         <select id="categoria">
-         <option value="seleccionar">Seleccionar</option>
-         </select>
+
+         <div class="categoria">
+           <label for="categoria">Categoria:</label>
+           <select id="categoria">
+             <option value="seleccionar" required>Seleccionar</option>
+            </select> 
+          </div>
 
         
          <label for="licencia">Licencia:</label>
          <select id="licencia">
-          <option value="seleccionar">Seleccionar</option>
+          <option value="seleccionar" required>Seleccionar</option>
          </select>
+
          <br><br>
+
          <label for="nombreProducto">Nombre del producto: </label>
-         <input type="text" id="nombreProducto" placeholder="Kakashi Hatake Shippuden Saga">
+         <input type="text" id="nombreProducto" placeholder="Kakashi Hatake Shippuden Saga"
+         required>
          
          <br><br>
-         <label for="email">Email:</label>
-         <input type="email" id="email" name="email" placeholder="juansanchez@gmail.com"
-         autocomplete="email" required><br><br>
+         
+         <label for="descripcionProducto"></label>
+         <input type="textarea" placeholder="Descripcion del producto" required>
 
+         <br><br>
+
+         <label for="sku">SKU: </label>
+         <input type="text" id="sku" placeholder="SSK111AB001" required>
+
+         <label for="precio">Precio: </label>
+         <input type="text" id="precio" placeholder="$ 0.000,00" required>
+
+         <label for="stock">Stock: </label>
+         <input type="text" id="stock" placeholder="0" required>
+
+         <br><br> 
+
+         <label for="Descuento">Descuento: </label>
+         <input type="text" id="Descuento" placeholder="0%" required>
          
          
-         <label for="contraseña">Contraseña:</label>
-         <input type="password" id="contraseña" name="contraseña" 
-         required><br><br>
+         <label for="cuotas">Cuotas:</label>
+         <select id="cuotas">
+           <option value="seleccionar" required>3 Cuotas sin interes</option>
+          </select>
+          
+          <br><br>
+          
+          <label for="imagenes">Imagenes: </label>
+          <input type="file" id="imagenes" value="Elegir archivos" required>
 
-         <label for="contraseña">repita Contraseña:</label>
-         <input type="password" id="contraseña" name="contraseña" 
-         required><br><br>
+          <br><br>
 
-
-         <label>Acepto Terminos y condiciones</label>
-         <input type="checkbox"><br><br>
-
-         <input type="submit" value="Registrar"><br><br>
+          <input type="submit" value="Agregar producto">
+          <input type="submit" value="Limpiar">
 
 
     </form>
 
     
-
-    <main>
-      
-    </main>
 
     <footer>
       Lo que vaya aca
