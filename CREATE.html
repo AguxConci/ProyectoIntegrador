@@ -1,29 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">    
   <head>
+    <link rel="stylesheet" type="text/css" href="CREATE.CSS">
      <meta charset="UTF-8" />
      <meta autor="Agus"
      <title></title>
 </head>
   <header>
     Lo que vaya aca 
-    
   </header>
 
   <body>
     <h1>CREAR NUEVO ITEM</h1>
 
-    <form  method="post" target="_self">
+    <form action="nowhere" method="post" target="_self">
 
          <label for="categoria">Categoria:</label>
-         <input type="text" id="categoria" name="nombre" placeholder="Seleccionar"
-         required><br><br>
+         <select id="categoria">
+         <option value="seleccionar">Seleccionar</option>
+         </select>
 
         
-         <label for="apellido">Apellido:</label>
-         <select type="" required><br><br>
-
+         <label for="licencia">Licencia:</label>
+         <select id="licencia">
+          <option value="seleccionar">Seleccionar</option>
+         </select>
+         <br><br>
+         <label for="nombreProducto">Nombre del producto: </label>
+         <input type="text" id="nombreProducto" placeholder="Kakashi Hatake Shippuden Saga">
          
+         <br><br>
          <label for="email">Email:</label>
          <input type="email" id="email" name="email" placeholder="juansanchez@gmail.com"
          autocomplete="email" required><br><br>
