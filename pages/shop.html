@@ -4,11 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shop</title>
+    <link rel="stylesheet" href="../assets/style.css" />
   </head>
   <body>
 
     <header>
-      <!-- Aquí va el conenido del header -->
+      <nav class="navbar container">
+        <!--Se utiliza este nombre para las barras de navegación "bar = barra" y "nav = navegar".-->
+        <picture class="navbar__logo">
+          <a href="../index.html">
+            <img
+              src="../img/branding/logo_light_horizontal.svg"
+              alt="logo de la página"
+            />
+          </a>
+        </picture>
+        <ul class="navbar__menu">
+          <li class="navbar__item"><a href="#" id="">VER TIENDA</a></li>
+          <li class="navbar__item"><a href="#" id="">ADMIN</a></li>
+          <li class="navbar__item"><a href="#" id="">SALIR</a></li>
+        </ul>
+      </nav>
     </header>
 
     <nav>
@@ -160,7 +176,18 @@
     </main>
 
     <footer>
-      <!-- Aquí va el conenido del footer -->
+      <div class="container navbar_footer ">
+      <nav class=" navbar_footer__menu">
+        <a href="../pages/shop.html">SHOP</a>
+        <a href="#">REGISTRARSE</a>
+        <a href="#">INGRESAR</a>
+        <a href="#">CONTACTO</a>
+      </nav>
+      <p class="derecho-autor">All rights reserved 2022 - Funkoshop &ampcopy;</p>
+      <picture class="navbar_footer__isotipo">
+        <img src="../img/branding/isotype.svg" alt="isotipo logo" />
+      </picture>
+      </div>
     </footer>
 
   </body>
