@@ -1,0 +1,68 @@
+/*LAS VARIABLES SE TOMAN DEL :root DEL ARCHIVO baseStyle.css*/
+
+/*Configuro que todo lo que tenga la clase "container, va a entrar en un ancho maximo de 1200px". 
+  Los 1200px van a quedar centrados debido al margen de 0 auto.*/
+.container {
+  max-width: 1200px; 
+  margin: 0 auto;
+} 
+
+/*Se coloca este color en el header y footer para todas las letras /textos que se encuentren dentro. 
+  Ya que la página web que tenemos que crear tiene de color de background, el gris.*/
+header {
+  font-family: var(--alternative-font);
+  color: var(--light-font-solid); 
+  background-color: var(--dark-bg-solid);
+  padding: var(--spacing-36);
+}
+
+footer {
+  font-family: var(--alternative-font);
+  color: var(--light-font-solid); 
+  background-color: var(--dark-bg-solid);
+  padding: var(--spacing-128);
+}
+
+/* Estilos de elementos de la etiqueta header.*/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__logo {
+  width: 300px;
+}
+
+.navbar__menu {
+  display: flex;
+  gap: var(--spacing-68);
+}
+
+.navbar__item {
+  font-size: var(--font-xsmall);
+}
+
+/* Estilos de elementos de la etiqueta footer.*/
+.navbar_footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar_footer__menu {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-xsmall);
+}
+
+.navbar_footer__isotipo {
+  width: 143px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.derecho-autor {
+  display: flex;
+  align-items: flex-end;
+  font-size: var(--font-xsmall);
+}

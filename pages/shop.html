@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shop</title>
     <link rel="stylesheet" href="../assets/baseStyle.css" />
-    <link rel="stylesheet" href="../assets/style.css" />
+    <link rel="stylesheet" href="../assets/headFootStyle.css" />
+    <link rel="stylesheet" href="../assets/shopStyle.css" />
   </head>
   <body>
 
-    <header>
+    <header> <!--Los estilos se encuentran en el archivo headFootStyle.css.-->
       <nav class="navbar container">
-        <!--Se utiliza este nombre para las barras de navegación "bar = barra" y "nav = navegar".-->
         <picture class="navbar__logo">
           <a href="../index.html">
             <img
@@ -28,155 +28,173 @@
       </nav>
     </header>
 
-    <nav>
-      <label for="buscar">
-        <p>BUSCAR:</p>
-        <input type="text" id="buscar" name="buscar" placeholder="Item o categoría" />
-      </label>
+    <div class="container container_shop">
+      <aside class="filtebar">
+        <ul class="filtebar_list">
+          <li class="filtebar_item">
+            <p>BUSCAR</p>
+            <label>
+              <input type="text" id="buscar" name="buscar" class="input_general input_text" placeholder="item o categoria" />
+            </label>
+          </li>
+          <li class="filtebar_item">
+            <p>ORDENAR POR</p>
+            <label>
+              <select id="ordenar" name="ordenar" class="input_general">
+                <option value="" selected>Mayor a menor</option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+              </select>
+            </label>
+          </li>
+          <li class="filtebar_item">
+            <p>PRECIO</p>
+            <div class="filterbar_item_range">
+              <label for="min">MIN</label>
+              <input id="min" name="min" class="input_general input_half" placeholder="0"/>
+              <label for="">-</label>
+              <label for="max">MAX</label>
+              <input id="max" name="max" class="input_general input_half" placeholder="0" />
+            </div>
+            <br />
+          </li>
+          <li class="filtebar_item">
+            <p>FILTRAR</p>
+            <div class="filterbar_item_checkbox">
+              <p>
+                <label for="filtrar">
+                  <input type="checkbox" name="filtrar" id="filtrar" class="input_general" value="nuevos" >
+                  NUEVOS</label>
+              </p>
+              <p>
+                <label for="filtrar">
+                  <input type="checkbox" name="filtrar" id="filtrar" class="input_general" value="ofertas" >
+                  OFERTAS</label>
+              </p>
+              <p>
+                <label for="filtrar">
+                  <input type="checkbox" name="filtrar" id="filtrar" class="input_general" value="edicionEspecial" checked>
+                  EDICIÓN ESPECIAL</label>
+              </p>
+              <p>
+                <label for="filtrar">
+                  <input type="checkbox" name="filtrar" id="filtrar" class="input_general" value="favoritos" >
+                  FAVORITOS</label>
+              </p>
+            </div>
+          </li>
+        </ul>
+      </aside>
+  
+      <main class="detailsection">
+        <section class="detailsection_products">
+          <article>
+            <span class="article_span_sup">NUEVO</span>
+            <img src="/img/star-wars/trooper-1.webp" alt="">
+            <div class="article_div_detail">
+              <p>STAR WARS</p>
+              <h1>STORMTROOPER LIGHTSABER</h1>
+              <p>$ 1799,99</p>
+              <span>3 CUOTAS SIN INTERÉS</span>
+            </div>
+          </article>
+          <article>
+            <span class="article_span_sup">NUEVO</span>
+            <img src="/img/pokemon/pidgeotto-1.webp" alt="">
+            <div class="article_div_detail">
+              <p>POKEMON</p>
+              <h4>PIDGEOTTO</h4>
+              <p>$ 1799,99</p>
+              <span>3 CUOTAS SIN INTERÉS</span>
+            </div>
+          </article>
+          <article>
+            <span class="article_span_sup">NUEVO</span>
+            <img src="/img/harry-potter/luna-1.webp" alt="">
+            <div class="article_div_detail">
+              <p>HARRY POTTER</p>
+              <h4>LUNA LOVEGOOD LION MASK</h4>
+              <p>$ 1799,99</p>
+              <span>3 CUOTAS SIN INTERÉS</span>
+            </div>
+          </article>
+          <article>
+            <span class="article_span_sup">NUEVO</span>
+            <img src="/img/star-wars/trooper-1.webp" alt="">
+            <div class="article_div_detail">
+              <p>STAR WARS</p>
+              <h4>STORMTROOPER LIGHTSABER</h4>
+              <p>$ 1799,99</p>
+              <span>3 CUOTAS SIN INTERÉS</span>
+            </div>
+          </article>
+          <article>
+            <span class="article_span_sup">NUEVO</span>
+            <img src="/img/pokemon/pidgeotto-1.webp" alt="">
+            <div class="article_div_detail">
+              <p>POKEMON</p>
+              <h4>PIDGEOTTO</h4>
+              <p>$ 1799,99</p>
+              <span>3 CUOTAS SIN INTERÉS</span>
+            </div>
+          </article>
+          <article>
+            <span class="article_span_sup">NUEVO</span>
+            <img src="/img/harry-potter/luna-1.webp" alt="">
+            <div class="article_div_detail">
+              <p>HARRY POTTER</p>
+              <h4>LUNA LOVEGOOD LION MASK</h4>
+              <p>$ 1799,99</p>
+              <span>3 CUOTAS SIN INTERÉS</span>
+            </div>
+          </article>
+          <article>
+            <span class="article_span_sup">NUEVO</span>
+            <img src="/img/star-wars/trooper-1.webp" alt="">
+            <div class="article_div_detail">
+              <p>STAR WARS</p>
+              <h4>STORMTROOPER LIGHTSABER</h4>
+              <p>$ 1799,99</p>
+              <span>3 CUOTAS SIN INTERÉS</span>
+            </div>
+          </article>
+          <article>
+            <span class="article_span_sup">NUEVO</span>
+            <img src="/img/pokemon/pidgeotto-1.webp" alt="">
+            <div class="article_div_detail">
+              <p>POKEMON</p>
+              <h4>PIDGEOTTO</h4>
+              <p>$ 1799,99</p>
+              <span>3 CUOTAS SIN INTERÉS</span>
+            </div>
+          </article>
+          <article>
+            <span class="article_span_sup">NUEVO</span>
+            <img src="/img/harry-potter/luna-1.webp" alt="">
+            <div class="article_div_detail">
+              <p>HARRY POTTER</p>
+              <h4>LUNA LOVEGOOD LION MASK</h4>
+              <p>$ 1799,99</p>
+              <span>3 CUOTAS SIN INTERÉS</span>
+            </div>
+          </article>
+        </section>
+        <br/><br/>
+        <section class="section_paginate">
+          <button class="paginate_item"><</button>
+          <button class="paginate_item">1</button>
+          <button class="paginate_item">2</button>
+          <button class="paginate_item">...</button>
+          <button class="paginate_item">9</button>
+          <button class="paginate_item">10</button>
+          <button class="paginate_item">></button>
+        </section>
+        <br/><br/><br/><br/>
+      </main>
+    </div>
 
-      <br /><br />
-
-      <label for="ordenar">
-        <p>ORDENAR POR:</p>
-        <select id="ordenar" name="ordenar" >
-          <option value="">Mayor a menor</option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-        </select>
-      </label>
-
-      <br /><br />
-
-      <div>
-        <p>PRECIO</p>
-        <label for="min">Min: 
-          <input type="number" id="min" name="min" placeholder="0" min="0"/>
-        </label>
-        <label for="max"> - Max
-          <input type="number" id="max" name="max" placeholder="0" />
-        </label>
-      </div>
-
-      <br /><br />
-      
-      <label for="categoria">Categoría:
-        <select id="categoria" name="categoria" >
-          <option value="">Figuras</option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-        </select>
-      </label>
-
-      <br /><br />
-
-      <div>
-        <label for="">
-          <p>
-            <input type="checkbox" name="filtrar" id="filtrar" value="nuevos" >NUEVOS
-          </p>
-        </label>
-        <label for="">
-          <p>
-            <input type="checkbox" name="filtrar" id="filtrar" value="ofertas" >OFERTAS
-          </p>
-        </label>
-        <label for="">
-          <p>
-            <input type="checkbox" name="filtrar" id="filtrar" value="edicionEspecial" >EDICIÓN ESPECIAL
-          </p>
-        </label>
-        <label for="">
-          <p>
-            <input type="checkbox" name="filtrar" id="filtrar" value="favoritos" >FAVORITOS
-          </p>
-        </label>
-      </div>
-    </nav>
-
-    <main>
-
-      <section>
-        <article>
-          <img src="/img/star-wars/trooper-1.webp" alt="">
-          <p>STAR WARS</p>
-          <h4>STORMTROOPER LIGHTSABER</h4>
-          <p>$ 1799,99</p>
-          <p>3 CUOTAS SIN INTERÉS</p>
-        </article>
-        <article>
-          <img src="/img/pokemon/pidgeotto-1.webp" alt="">
-          <p>POKEMON</p>
-          <h4>PIDGEOTTO</h4>
-          <p>$ 1799,99</p>
-          <p>3 CUOTAS SIN INTERÉS</p>
-        </article>
-        <article>
-          <img src="/img/harry-potter/luna-1.webp" alt="">
-          <p>HARRY POTTER</p>
-          <h4>LUNA LOVEGOOD LION MASK</h4>
-          <p>$ 1799,99</p>
-          <p>3 CUOTAS SIN INTERÉS</p>
-        </article>
-        <article>
-          <img src="/img/star-wars/trooper-1.webp" alt="">
-          <p>STAR WARS</p>
-          <h4>STORMTROOPER LIGHTSABER</h4>
-          <p>$ 1799,99</p>
-          <p>3 CUOTAS SIN INTERÉS</p>
-        </article>
-        <article>
-          <img src="/img/pokemon/pidgeotto-1.webp" alt="">
-          <p>POKEMON</p>
-          <h4>PIDGEOTTO</h4>
-          <p>$ 1799,99</p>
-          <p>3 CUOTAS SIN INTERÉS</p>
-        </article>
-        <article>
-          <img src="/img/harry-potter/luna-1.webp" alt="">
-          <p>HARRY POTTER</p>
-          <h4>LUNA LOVEGOOD LION MASK</h4>
-          <p>$ 1799,99</p>
-          <p>3 CUOTAS SIN INTERÉS</p>
-        </article>
-        <article>
-          <img src="/img/star-wars/trooper-1.webp" alt="">
-          <p>STAR WARS</p>
-          <h4>STORMTROOPER LIGHTSABER</h4>
-          <p>$ 1799,99</p>
-          <p>3 CUOTAS SIN INTERÉS</p>
-        </article>
-        <article>
-          <img src="/img/pokemon/pidgeotto-1.webp" alt="">
-          <p>POKEMON</p>
-          <h4>PIDGEOTTO</h4>
-          <p>$ 1799,99</p>
-          <p>3 CUOTAS SIN INTERÉS</p>
-        </article>
-        <article>
-          <img src="/img/harry-potter/luna-1.webp" alt="">
-          <p>HARRY POTTER</p>
-          <h4>LUNA LOVEGOOD LION MASK</h4>
-          <p>$ 1799,99</p>
-          <p>3 CUOTAS SIN INTERÉS</p>
-        </article>
-      </section>
-
-      <br /><br />
-
-      <section>
-        <a href=""><</a>
-        <a href="">1</a>
-        <a href="">2</a>
-        <a href="">...</a>
-        <a href="">9</a>
-        <a href="">10</a>
-        <a href="">></a>
-      </section>
-    </main>
-
-    <footer>
+    <footer> <!--Los estilos se encuentran en el archivo headFootStyle.css.-->
       <div class="container navbar_footer ">
       <nav class=" navbar_footer__menu">
         <a href="../pages/shop.html">SHOP</a>
