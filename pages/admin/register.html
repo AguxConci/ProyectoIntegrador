@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register</title>
-    <link rel="stylesheet" href="/css/registerStyle.css">
+    <link rel="stylesheet" href="/css/registerStyle.css" />
   </head>
   <body>
     <!-- Inicio Header -->
@@ -50,50 +50,51 @@
       </nav>
     </header>
     <!-- Fin Header -->
-    <main>
-      <h1>CREA TU CUENTA</h1>
-      <p>Completa el formulario para ser parte del mundo de los funkos</p>
-      <form method="post" target="_self">
-        <label for="nombre">Nombre:</label>
-        <input
-          type="text"
-          id="nombre"
-          name="nombre"
-          placeholder="John"
-          required
-        />
-        <br /><br />
+    <main class="container">
+      <section class="register container">
+        <h1 class="regiter__title">CREA TU CUENTA</h1>
+        <p class="regiter__subtitle">Completa el formulario para ser parte del mundo de los funkos</p>
+        <form class="form" method="post" target="_self">
+          <label for="nombre">Nombre:</label>
+          <input class="input__text"
+            type="text"
+            id="nombre"
+            name="nombre"
+            placeholder="John"
+            required
+          />
+          <br /><br />
 
-        <label for="apellido">Apellido:</label>
-        <input
-          type="text"
-          id="apellido"
-          name="apellido"
-          placeholder="Doe"
-          required
-        />
-        <br /><br />
+          <label for="apellido">Apellido:</label>
+          <input class="input__text"
+            type="text"
+            id="apellido"
+            name="apellido"
+            placeholder="Doe"
+            required
+          />
+          <br /><br />
 
-        <label for="email">Email:</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="johndoe@correo.com"
-          required
-        />
-        <br /><br />
+          <label for="email">Email:</label>
+          <input class="input__text"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="johndoe@correo.com"
+            required
+          />
+          <br /><br />
 
-        <label for="pass">Contraseña:</label>
-        <input type="password" id="pass" name="pass" required />
-        <br /><br />
+          <label for="pass">Contraseña:</label>
+          <input class="input__text" type="password" id="pass" name="pass" placeholder="********" required />
+          <br /><br />
 
-        <label for="pass2">Repita Contraseña:</label>
-        <input type="password" id="pass2" name="pass2" required />
-        <br /><br />
+          <label for="pass2">Repita Contraseña:</label>
+          <input class="input__text" type="password" id="pass2" name="pass2" placeholder="********" required />
+          <br /><br />
 
-        <input type="submit" value="Registrar" />
-        <label>
+          <input type="submit" value="Registrar" />
+          <label>
             <input
               type="checkbox"
               id="aceptoTerminos"
@@ -102,13 +103,11 @@
             />
             Acepto Términos y Condiciones
           </label>
-       
-
-      </form>
+        </form>
+      </section>
     </main>
     <!-- Inicio footer -->
     <footer class="footer">
-     
       <nav class="navbar container">
         <ul class="navbar__items">
           <li class="navbar__item">
@@ -130,11 +129,11 @@
           </a>
         </picture>
       </nav>
-   
-    <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>
-  </footer>
+
+      <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>
+    </footer>
     <!-- Fin footer -->
 
-  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
   </body>
 </html>
