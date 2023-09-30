@@ -4,31 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register</title>
+    <link rel="stylesheet" href="/css/registerStyle.css">
   </head>
   <body>
     <header>
-      <nav>
-        <picture>
+      <nav class="navbar container">
+        <picture class="navbar__logo">
           <a href="./index.html">
             <img
-              src="/images/branding/logo_light_horizontal.svg"
+              src="/img/branding/logo_light_horizontal.svg"
               alt="Isologotipo de la Marca Funkoshop"
             />
           </a>
         </picture>
-        <ul>
-          <li>
-            <a href="../shop/shop.html">SHOP</a>
+        <ul class="navbar_menu">
+          <li class="navbar__item with-submenu">
+            <a class="navbar__link with-icon" href="./pages/shop/shop.html"
+              >SHOP <iconify-icon icon="tabler:chevron-down"></iconify-icon
+            ></a>
+            <ul class="submenu">
+              <li class="submenu__item">
+                <a href="" class="submenu__link">Funkos</a>
+              </li>
+              <li class="submenu__item">
+                <a href="" class="submenu__link">Remeras</a>
+              </li>
+              <li class="submenu__item">
+                <a href="" class="submenu__link">Llaveros</a>
+              </li>
+            </ul>
           </li>
-          <li>
-            <a href="./pages/contact.html">CONTACTO</a>
+          <li class="navbar__item">
+            <a class="navbar__link" href="#">CONTACTO</a>
           </li>
-          <li>
-            <a href="./pages/login.html">LOGIN</a>
+          <li class="navbar__item">
+            <a class="navbar__link" href="./pages/admin/login.html">LOGIN</a>
           </li>
-          <li>
-            <a href="./pages/cart.html">
-              <img src="/images/icons/cart-icon.svg" alt="Icon Cart" />
+          <li class="navbar__item">
+            <a class="navbar__cart" href="./pages/shop/cart.html">
+              <img src="/img/icons/cart-icon.svg" alt="Icon Cart" />
             </a>
           </li>
         </ul>
@@ -90,34 +104,33 @@
 
       </form>
     </main>
-    <footer>
-      <section>
-        <nav>
-          <ul>
-            <li>
-              <a href="../shop/shop.html">SHOP</a>
-            </li>
-            <li>
-              <a href="../admin/register.html">REGISTRARSE</a>
-            </li>
-            <li>
-              <a href="./pages/login.html">LOGIN</a>
-            </li>
-            <li>
-              <a href="./pages/contact.html">CONTACTO</a>
-            </li>
-          </ul>
-          <picture>
-            <a href="./index.html">
-              <img
-                src="/images/branding/isotype.svg"
-                alt="Isologotipo de la Marca Funkoshop - no frase"
-              />
-            </a>
-          </picture>
-        </nav>
-      </section>
-      <p>All rights reserved 2023 - Funkoshop &copy;</p>
-    </footer>
+
+    <footer class="footer">
+     
+      <nav class="navbar container">
+        <ul class="navbar__items">
+          <li class="navbar__item">
+            <a class="navbar__link" href="./pages/shop/shop.html">SHOP</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="./pages/admin/login.html">LOGIN</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="#">CONTACTO</a>
+          </li>
+        </ul>
+        <picture>
+          <a href="./index.html">
+            <img
+              src="/img/branding/isotype.svg"
+              alt="Isologotipo de la Marca Funkoshop - no frase"
+            />
+          </a>
+        </picture>
+      </nav>
+   
+    <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
   </body>
 </html>
