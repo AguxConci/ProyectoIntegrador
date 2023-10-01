@@ -39,3 +39,58 @@
   border-right: none;
   border-bottom: solid var(--primary-solid);
 }
+
+.form {
+     
+    /* solo falta esto */
+}
+
+.label {
+  color: #000;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.96px;
+}
+
+.check {
+  width: 16.275px;
+  height: 16.275px;
+  flex-shrink: 0;
+  border-radius: 3px;
+  border: 2px solid #1f1f1f;
+}
+
+.aceptoTerminos {
+  color: #1f1f1f;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.aceptoTerminos > b {
+  color: #1d84b5;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.submit {
+  border: none;
+  width: 102.995px;
+  height: 39.062px;
+  flex-shrink: 0;
+  background: #f33;
+  color: #fff;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

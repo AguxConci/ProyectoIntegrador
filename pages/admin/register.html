@@ -55,7 +55,7 @@
         <h1 class="regiter__title">CREA TU CUENTA</h1>
         <p class="regiter__subtitle">Completa el formulario para ser parte del mundo de los funkos</p>
         <form class="form" method="post" target="_self">
-          <label for="nombre">Nombre:</label>
+          <label class="label" for="nombre">Nombre:</label>
           <input class="input__text"
             type="text"
             id="nombre"
@@ -65,7 +65,7 @@
           />
           <br /><br />
 
-          <label for="apellido">Apellido:</label>
+          <label class="label" for="apellido">Apellido:</label>
           <input class="input__text"
             type="text"
             id="apellido"
@@ -75,7 +75,7 @@
           />
           <br /><br />
 
-          <label for="email">Email:</label>
+          <label class="label" for="email">Email:</label>
           <input class="input__text"
             type="email"
             id="email"
@@ -85,23 +85,23 @@
           />
           <br /><br />
 
-          <label for="pass">Contraseña:</label>
+          <label class="label" for="pass">Contraseña:</label>
           <input class="input__text" type="password" id="pass" name="pass" placeholder="********" required />
           <br /><br />
 
-          <label for="pass2">Repita Contraseña:</label>
+          <label class="label" for="pass2">Repita Contraseña:</label>
           <input class="input__text" type="password" id="pass2" name="pass2" placeholder="********" required />
           <br /><br />
 
-          <input type="submit" value="Registrar" />
-          <label>
-            <input
+          <input class="submit" type="submit" value="Registrar" />
+          <label class="aceptoTerminos">
+            <input class="check"
               type="checkbox"
               id="aceptoTerminos"
               name="aceptoTerminos"
               required
             />
-            Acepto Términos y Condiciones
+            Acepto <b>Términos y Condiciones</b>
           </label>
         </form>
       </section>
