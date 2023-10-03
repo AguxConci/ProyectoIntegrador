@@ -2,6 +2,7 @@
 *{
 background-color: white;
 margin: 0;
+font-family: "inter";
 }
 
 
@@ -11,6 +12,11 @@ h1 {
     height: 49px;
 }
 
-.categoria {
-position: absolute;
+#nombreProducto {
+    width: 581.06px;
 }
+
+.subrayado {
+border-bottom-style: solid;
+}
+
