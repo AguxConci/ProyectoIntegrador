@@ -1,8 +1,14 @@
 @import url(./baseStyle.css);
 
+
+.main {
+  display: flex;
+
+}
+
 .register {
   display: flex;
-  width: 1440px;
+  /* width: 1440px; */
 
   flex-direction: column;
   justify-content: center;
@@ -12,10 +18,10 @@
 }
 
 .regiter__title {
-  color: #1f1f1f;
+  color: var(--dark-solid);
   text-align: right;
-  font-family: Raleway;
-  font-size: 42px;
+  font-family: var(--alternative-font);
+  font-size: var(--font-display);
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -23,10 +29,10 @@
 }
 
 .regiter__subtitle {
-  color: #1f1f1f;
+  color: var(--dark-solid);
   text-align: right;
-  font-family: Raleway;
-  font-size: 32px;
+  font-family: var(--alternative-font);
+  font-size: var(--font-xlarge);
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -38,17 +44,35 @@
   border-left: none;
   border-right: none;
   border-bottom: solid var(--primary-solid);
+  color: #b9b9b9;
+  text-align: left;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.64px;
 }
 
 .form {
-     
-    /* solo falta esto */
+  display: grid;
+  grid-column: 1 / 6;
+  gap: 8px;
+  
+}
+
+.col-1 {
+  grid-column: 1 / 2;
+}
+
+.col-2 {
+  grid-column: 4 / 6;
 }
 
 .label {
-  color: #000;
-  font-family: Inter;
-  font-size: 24px;
+  color: var(--dark-solid);
+  font-family: var(--base-font);
+  font-size: var(--font-large);
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -60,13 +84,13 @@
   height: 16.275px;
   flex-shrink: 0;
   border-radius: 3px;
-  border: 2px solid #1f1f1f;
+  border: 2px solid var(--dark-solid);
 }
 
 .aceptoTerminos {
-  color: #1f1f1f;
-  font-family: Inter;
-  font-size: 18px;
+  color: var(--dark-solid);
+  font-family: var(--base-font);
+  font-size: var(--font-medium);
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -74,7 +98,7 @@
 
 .aceptoTerminos > b {
   color: #1d84b5;
-  font-family: Inter;
+  font-family: var(--base-font);
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -88,7 +112,7 @@
   flex-shrink: 0;
   background: #f33;
   color: #fff;
-  font-family: Inter;
+  font-family: var(--base-font);
   font-size: 12px;
   font-style: normal;
   font-weight: 400;

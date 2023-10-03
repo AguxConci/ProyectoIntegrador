@@ -50,13 +50,16 @@
       </nav>
     </header>
     <!-- Fin Header -->
-    <main class="container">
+    <main class="main container">
       <section class="register container">
         <h1 class="regiter__title">CREA TU CUENTA</h1>
-        <p class="regiter__subtitle">Completa el formulario para ser parte del mundo de los funkos</p>
+        <p class="regiter__subtitle">
+          Completa el formulario para ser parte del mundo de los funkos
+        </p>
         <form class="form" method="post" target="_self">
-          <label class="label" for="nombre">Nombre:</label>
-          <input class="input__text"
+          <label class="label col-1" for="nombre">Nombre:</label>
+          <input
+            class="input__text col-2"
             type="text"
             id="nombre"
             name="nombre"
@@ -65,8 +68,9 @@
           />
           <br /><br />
 
-          <label class="label" for="apellido">Apellido:</label>
-          <input class="input__text"
+          <label class="label col-1" for="apellido">Apellido:</label>
+          <input
+            class="input__text col-2"
             type="text"
             id="apellido"
             name="apellido"
@@ -75,8 +79,9 @@
           />
           <br /><br />
 
-          <label class="label" for="email">Email:</label>
-          <input class="input__text"
+          <label class="label col-1" for="email">Email:</label>
+          <input
+            class="input__text col-2"
             type="email"
             id="email"
             name="email"
@@ -85,17 +90,32 @@
           />
           <br /><br />
 
-          <label class="label" for="pass">Contraseña:</label>
-          <input class="input__text" type="password" id="pass" name="pass" placeholder="********" required />
+          <label class="label col-1" for="pass">Contraseña:</label>
+          <input
+            class="input__text col-2"
+            type="password"
+            id="pass"
+            name="pass"
+            placeholder="********"
+            required
+          />
           <br /><br />
 
-          <label class="label" for="pass2">Repita Contraseña:</label>
-          <input class="input__text" type="password" id="pass2" name="pass2" placeholder="********" required />
+          <label class="label col-1" for="pass2">Repita Contraseña:</label>
+          <input
+            class="input__text col-2"
+            type="password"
+            id="pass2"
+            name="pass2"
+            placeholder="********"
+            required
+          />
           <br /><br />
 
-          <input class="submit" type="submit" value="Registrar" />
-          <label class="aceptoTerminos">
-            <input class="check"
+          <input class="submit col-1" type="submit" value="Registrar" />
+          <label class="aceptoTerminos col-2">
+            <input
+              class="check"
               type="checkbox"
               id="aceptoTerminos"
               name="aceptoTerminos"
