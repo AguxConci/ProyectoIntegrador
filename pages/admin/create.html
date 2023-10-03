@@ -51,7 +51,35 @@
 
   <!-- Inicio Main -->
   <main class="shop container">
+    <h1>CREA TU CUENTA</h1>
+    <p>Completa el formulario para ser parte del mundo de los funkos</p>
+    <form  method="post" target="_self">
 
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" placeholder="John"
+      autocomplete="given-name" required><br><br>
+
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="apellido" name="nombre" placeholder="Doe"
+      autocomplete="family-name" required><br><br>
+         
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="johndoe@correo.com@"
+      autocomplete="email" required><br><br>
+
+      <label for="contraseña">Contraseña:</label>
+      <input type="password" id="contraseña" name="contraseña" 
+      required><br><br>
+
+      <label for="contraseña">Repita Contraseña:</label>
+      <input type="password" id="contraseña" name="contraseña" 
+      required><br><br>
+
+      <label>Acepto Terminos y condiciones</label>
+      <input type="checkbox"><br><br>
+
+      <input type="submit" value="Registrar" onclick="alert('Gracias!')"><br><br>
+    </form>
   </main>
   <!-- Fin Main -->
 
