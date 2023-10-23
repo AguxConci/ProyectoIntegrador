@@ -56,18 +56,18 @@
     <main class="content container">
       <h3 class="content__title">EDITAR ITEM</h3>
       <div class="content__filter">
-        <div class="">
+        <div class="content__list">
           <label for="" class="content__category">Categoría:</label>
-          <select name="" id="" class="">
+          <select name="" id="" class="content__list--items">
             <option value="">Figuras1</option>
             <option value="">Figuras2</option>
             <option value="">Figuras3</option>
             <option value="">Figuras4</option>
           </select>
         </div>
-        <div class="">
+        <div class="content__list">
           <label for="" class="content__license">Licencia:</label>
-          <select name="" id="" class="">
+          <select name="" id="" class="content__list--items">
             <option value="">Naruto Shipudden1</option>
             <option value="">Naruto Shipudden2</option>
             <option value="">Naruto Shipudden3</option>
@@ -75,58 +75,82 @@
           </select>
         </div>
       </div>
-      <div>
-        <label for="" class="">Nombre del producto:</label>
-        <input type="text" />
+      <div class="product">
+        <label for="" class="product__name">Nombre del producto:</label>
+        <input class="product__name--text" type="text" />
       </div>
       <textarea class="" name="" id="" cols="60" rows="10"></textarea>
-      <div class="">
+      <div class="description-product">
         <div>
-          <label for="sku">SKU:</label>
-          <input type="text" id="sku" name="sku" />
+          <label class="description-product__sku" for="sku">SKU:</label>
+          <input
+            class="description-product__text"
+            type="text"
+            id="sku"
+            name="sku"
+          />
         </div>
         <div>
-          <label for="precio">Precio:</label>
-          <input type="text" id="precio" name="precio" />
+          <label class="description-product__price" for="precio">Precio:</label>
+          <input
+            class="description-product__price--text"
+            type="text"
+            id="precio"
+            name="precio"
+          />
         </div>
         <div>
-          <label for="stock">Stock:</label>
-          <input type="text" id="stock" name="stock" />
+          <label class="description-product__stock" for="stock">Stock:</label>
+          <input
+            class="description-product__stock--text"
+            type="text"
+            id="stock"
+            name="stock"
+          />
         </div>
       </div>
-      <div class="">
-        <label for="descuento">Descuento:</label>
-        <input type="text" id="descuento" name="descuento" />
-        <label for="cuotas">Cuotas:</label>
-        <select name="cuotas" id="cuotas">
-          <option value="">3 cuotas sin interés</option>
-          <option value="">6 cuotas sin interés</option>
-          <option value="">12 cuotas sin interés</option>
+      <div class="promo">
+        <label class="promo__descuento" for="descuento">Descuento:</label>
+        <input
+          class="promo__descuento--text"
+          type="text"
+          id="descuento"
+          name="descuento"
+        />
+        <label class="promo__cuotas" for="cuotas">Cuotas:</label>
+        <select class="promo-cuotas--items" name="cuotas" id="cuotas">
+          <option class="promo__cuotas--item" value="">
+            3 cuotas sin interés
+          </option>
+          <option class="promo__cuotas--item" value="">
+            6 cuotas sin interés
+          </option>
+          <option class="promo__cuotas--item" value="">
+            12 cuotas sin interés
+          </option>
         </select>
       </div>
 
-      <div class="">
-        <label for="">Imágenes:</label>
-        <input type="file" imagenes />
+      <div class="select-img">
+        <label class="select-img__text" for="">Imágenes:</label>
+        <input class="select-img__button" type="file" />
       </div>
-      <div class="">
-        <picture>
-          <img
-            src="img/pokemon/charmander-box.webp"
-            alt="imagencharmonder-box-web"
-          />
-          <figcaption>Frente</figcaption>
+      <div class="imagenes">
+        <picture class="cover">
+          <img class="cover-img" src="" alt="imagencharmonder-box-web" />
+          <figcaption class="cover__text">Frente</figcaption>
         </picture>
-        <picture>
+        <picture class="cover">
           <img
+            class="cover-img"
             src="../img/star-wars/bobbafeth-box.webp"
-            alt="iamgen star-wars bobbafeth"
+            alt="imagen star-wars bobbafeth"
           />
-          <figcaption>Dorso</figcaption>
+          <figcaption class="cover__text">Dorso</figcaption>
         </picture>
       </div>
       <div>
-        <button class="">Modificar Producto</button>
+        <button class="button">Modificar Producto</button>
       </div>
     </main>
     <!-- Fin Main -->
