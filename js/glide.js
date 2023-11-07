@@ -1,3 +1,11 @@
+const funkosShop = document.querySelectorAll('.card-item__link');
+
+funkosShop.forEach((fnk) => {
+  fnk.addEventListener("click", function () {
+    localStorage.setItem("funcoSelected", fnk.id);
+  })
+});
+
 new Glide('.glide', {
     type: 'carousel',
     startAt: 0,

@@ -21,9 +21,11 @@
         </picture>
         <ul class="navbar_menu">
           <li class="navbar__item with-submenu">
-            <a class="navbar__link with-icon" href="./shop.html"
-              >SHOP <iconify-icon icon="tabler:chevron-down"></iconify-icon
-            ></a>
+            <a class="navbar__link with-icon" href="./shop.html">
+              SHOP
+              <iconify-icon icon="tabler:chevron-down">
+              </iconify-icon>
+            </a>
             <ul class="submenu">
               <li class="submenu__item">
                 <a href="#" class="submenu__link">Funkos</a>
@@ -66,62 +68,6 @@
             </tr>
           </thead>
           <tbody>
-            <tr class="cart-item">
-              <td class="cart-item__datail">
-                <img src="../../img/star-wars/baby-yoda-1.webp" alt="" class="item__img"/>
-                <div class="item__info">
-                  <div class="item__info-title">
-                    <h2>BABY YODA BLUEBALL</h2>
-                    <p>STAR WARS</p>
-                  </div>
-                  <div class="">  
-                    <p>precio: $ 1799,99</p>
-                  </div>
-                </div>
-              </td>
-              <td>
-                <div class="cart-item__count">
-                  <label for="min">
-                    <input id="quantity" name="min" class="" placeholder="0" value="2" />
-                  </label>
-                  <div class="item__count-actions">
-                    <button id="add" type="button"><img src="../../img/icons/plus-icon.svg" alt=""></button>
-                    <button id="subtract" type="button"><img src="../../img/icons/less-icon.svg" alt=""></button>
-                  </div>
-                </div>
-              </td>
-              <td class="item__price">$ 3599,98</td>
-              <td class="item__action"><img src="../../img/icons/remove_icon.svg" alt="Remove"></td>
-            </tr>
-
-
-            <tr class="cart-item">
-              <td  class="cart-item__datail">
-                <img src="../../img/pokemon/pidgeotto-1.webp" alt="" class="item__img"/>
-                <div class="item__info">
-                  <div class="item__info-title">
-                    <h2 class="">PIDGEOTTO</h2>
-                    <p class="">POKEMON</p>
-                  </div>
-                  <div>
-                    <p class="">precio: $ 1799,99</p>
-                  </div>
-                </div>
-              </td>
-              <td>
-                <div class="cart-item__count">
-                  <label for="min">
-                    <input id="quantity2" name="min" class="" placeholder="0" value="1" />
-                  </label>
-                  <div class="item__count-actions">
-                    <button id="add2" type="button"><img src="../../img/icons/plus-icon.svg" alt=""></button>
-                    <button id="subtract2" type="button"><img src="../../img/icons/less-icon.svg" alt=""></button>
-                  </div>
-                </div>
-              </td>
-              <td class="item__price">$ 1799,99</td>
-              <td class="item__action"><img src="../../img/icons/remove_icon.svg" alt="Remove"></td>
-            </tr>
           </tbody>
         </table>
       </section>
@@ -133,15 +79,15 @@
         </div>
         <div class="cart-sumary__line">
           <p>SUBTOTAL</p>
-          <p>$ 5.399,97</p>
+          <p id="subTotal_price">$ 5.399,97</p>
         </div>
         <div class="cart-sumary__line">
           <p>ENVIO</p>
-          <p>$ 0,00</p>
+          <p id="send_price">$ 0,00</p>
         </div>
         <div class="cart-sumary__total">
           <p>TOTAL</p>
-          <p>$ 5.399,97</p>
+          <p id="total_price">$ 5.399,97</p>
         </div>
       </section>
       <button type="submit" class="cart__button">IR A PAGAR</button>
@@ -174,6 +120,8 @@
       <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>
     </footer>
     <!-- Fin Footer -->
-    <script src="../../js/cart.js"></script>
+    <script src="../../js/_funkoList.js"></script>
+    <script src="../../js/clientCart.js"></script>
+    <script type="module" src="../../js/cart.js"></script>
   </body>
 </html>

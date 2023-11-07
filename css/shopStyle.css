@@ -116,6 +116,12 @@ input[type="checkbox"]:checked::before{
   grid-template-rows: 1fr 1fr 1fr;
 }
 
+iconify-icon {
+  color: var(--dark-bg-solid);
+  font-size: var(--font-small);
+  font-weight: 700;
+}
+
 .slider__title {
   font-family: var(--alternative-font);
   font-size: var(--font-display);

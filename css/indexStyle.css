@@ -98,8 +98,8 @@
   padding: var(--spacing-16) var(--spacing-36);
   border-radius: 50px;
   font-weight: 500;
-  transition: background 3s ease-in-out;
-}
+  transition: background .3s ease-in-out;
+} 
 
 .collection__link:hover {
   background-color: var(--primary-900);
