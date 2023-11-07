@@ -19,8 +19,7 @@
       </picture>
       <ul class="navbar_menu">
         <li class="navbar__item with-submenu">
-          <a class="navbar__link with-icon" href="../shop/shop.html">SHOP <iconify-icon
-              icon="tabler:chevron-down"></iconify-icon></a>
+          <a class="navbar__link with-icon" href="../shop/shop.html">SHOP </a>
           <ul class="submenu">
             <li class="submenu__item">
               <a href="#" class="submenu__link">Funkos</a>
@@ -50,81 +49,105 @@
   <!-- Fin Header -->
 
   <!-- Inicio Main -->
-  <main class="container">
-    <h3 class="">EDITAR ITEM</h3>
-      <div class="">
-        <div class="">
-          <label for="" class="">Categoría:</label>
-          <select name="" id="" class="">
-            <option value="">Figuras1</option>
-            <option value="">Figuras2</option>
-            <option value="">Figuras3</option>
-            <option value="">Figuras4</option>
-          </select>
-        </div>
-        <div class="">
-          <label for="" class="">Licencia:</label>
-          <select name="" id="" class="">
-            <option value="">Naruto Shipudden1</option>
-            <option value="">Naruto Shipudden2</option>
-            <option value="">Naruto Shipudden3</option>
-            <option value="">Naruto Shipudden4</option>
-          </select>
-        </div>
-      </div>
-      <div>
-        <label for="" class="">Nombre del producto:</label>
-        <input type="text" />
-      </div>
-      <textarea class="" name="" id="" cols="60"rows="10"></textarea>
-      <div class="">
-        <div>
-          <label for="sku">SKU:</label>
-          <input type="text" id="sku" name="sku" />
-        </div>
-        <div>
-          <label for="precio">Precio:</label>
-          <input type="text" id="precio" name="precio" />
-        </div>
-        <div>
-          <label for="stock">Stock:</label>
-          <input type="text" id="stock" name="stock" />
-        </div>
-      </div>
-      <div class="">
-        <label for="descuento">Descuento:</label>
-        <input type="text" id="descuento" name="descuento" />
-        <label for="cuotas">Cuotas:</label>
-        <select name="cuotas" id="cuotas">
-          <option value="">3 cuotas sin interés</option>
-          <option value="">6 cuotas sin interés</option>
-          <option value="">12 cuotas sin interés</option>
+  <main class="content container">
+    <h3 class="content__title">EDITAR ITEM</h3>
+    <div class="content__filter">
+      <div class="content__list">
+        <label for="" class="content__category">Categoría:</label>
+        <select name="" id="" class="content__list--items">
+          <option value="">Figuras1</option>
+          <option value="">Figuras2</option>
+          <option value="">Figuras3</option>
+          <option value="">Figuras4</option>
         </select>
       </div>
-
-      <div class="">
-        <label for="">Imágenes:</label>
-        <input type="file" imagenes />
+      <div class="content__list">
+        <label for="" class="content__license">Licencia:</label>
+        <select name="" id="" class="content__list--items">
+          <option value="">Naruto Shipudden1</option>
+          <option value="">Naruto Shipudden2</option>
+          <option value="">Naruto Shipudden3</option>
+          <option value="">Naruto Shipudden4</option>
+        </select>
       </div>
-      <div class="">
-        <picture>
-          <img
-            src="img/pokemon/charmander-box.webp"
-            alt="imagencharmonder-box-web"
-          />
-          <figcaption>Frente</figcaption>
-        </picture>
-        <picture>
-          <img
-            src="../img/star-wars/bobbafeth-box.webp"
-            alt="iamgen star-wars bobbafeth"
-          />
-          <figcaption>Dorso</figcaption>
-        </picture>
+    </div>
+    <div class="product">
+      <label for="" class="product__name">Nombre del producto:</label>
+      <input class="product__name--text" type="text" />
+    </div>
+    <textarea class="" name="" id="" cols="60" rows="10"></textarea>
+    <div class="description-product">
+      <div>
+        <label class="description-product__sku" for="sku">SKU:</label>
+        <input
+          class="description-product__text"
+          type="text"
+          id="sku"
+          name="sku"
+        />
       </div>
       <div>
-        <button class="">Modificar Producto</button>
+        <label class="description-product__price" for="precio">Precio:</label>
+        <input
+          class="description-product__price--text"
+          type="text"
+          id="precio"
+          name="precio"
+        />
       </div>
+      <div>
+        <label class="description-product__stock" for="stock">Stock:</label>
+        <input
+          class="description-product__stock--text"
+          type="text"
+          id="stock"
+          name="stock"
+        />
+      </div>
+    </div>
+    <div class="promo">
+      <label class="promo__descuento" for="descuento">Descuento:</label>
+      <input
+        class="promo__descuento--text"
+        type="text"
+        id="descuento"
+        name="descuento"
+      />
+      <label class="promo__cuotas" for="cuotas">Cuotas:</label>
+      <select class="promo-cuotas--items" name="cuotas" id="cuotas">
+        <option class="promo__cuotas--item" value="">
+          3 cuotas sin interés
+        </option>
+        <option class="promo__cuotas--item" value="">
+          6 cuotas sin interés
+        </option>
+        <option class="promo__cuotas--item" value="">
+          12 cuotas sin interés
+        </option>
+      </select>
+    </div>
+
+    <div class="select-img">
+      <label class="select-img__text" for="">Imágenes:</label>
+      <input class="select-img__button" type="file" />
+    </div>
+    <div class="imagenes">
+      <picture class="cover">
+        <img class="cover-img" src="/img/harry-potter/harry-1.webp" alt="imagencharmonder-box-web" />
+        <figcaption class="cover__text">Frente</figcaption>
+      </picture>
+      <picture class="cover">
+        <img
+          class="cover-img"
+          src="/img/harry-potter/harry-box.webp"
+          alt="imagen star-wars bobbafeth"
+        />
+        <figcaption class="cover__text">Dorso</figcaption>
+      </picture>
+    </div>
+    <div>
+      <button class="button">Modificar Producto</button>
+    </div>
   </main>
   <!-- Fin Main -->
 
