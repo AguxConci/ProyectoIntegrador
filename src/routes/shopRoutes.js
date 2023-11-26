@@ -1,10 +1,11 @@
 const express = require('express');
 const router = express.Router();
+const shopControllers = require('../controllers/shopControllers');
 
-router.get('/', (req, res) => res.send('Route for Shop View'));
-router.get('/item/:id', (req, res) => res.send('Route for find and retrieve a product from an ID'));
-router.post('/item/:id/add', (req, res) => res.send('Route for add the curent item to the shop cart'));
-router.get('/cart', (req, res) => res.send('Route for cart View'));
-router.post('/cart', (req, res) => res.send('Route for got to checkout page'));
+router.get('/', (req, res) => res.send(shopControllers.View));
+router.get('/item/:id', (req, res) => res.send(shopControllers.itemView));
+router.post('/item/:id/add', (req, res) => res.send(shopControllers.addItemToCart));
+router.get('/cart', (req, res) => res.send(shopControllers.cartView));
+router.post('/cart', (req, res) => res.send(shopControllers.checkout));
 
 module.exports = router;
