@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crear</title>
+  <link rel="stylesheet" href="/css/editStyle.css" />
+  <link rel="stylesheet" href="/css/createStyle.css" />
+</head>
+
+<body>
+  <!-- Inicio Header -->
+  <header>
+    <nav class="navbar container">
+      <picture class="navbar__logo">
+        <a href="../../index.html">
+          <img src="../../img/branding/logo_light_horizontal.svg" alt="Isologotipo de la Marca Funkoshop" />
+        </a>
+      </picture>
+      <ul class="navbar_menu">
+        <li class="navbar__item with-submenu">
+          <a class="navbar__link with-icon" href="../shop/shop.html">SHOP <iconify-icon
+              icon="tabler:chevron-down"></iconify-icon></a>
+          <ul class="submenu">
+            <li class="submenu__item">
+              <a href="#" class="submenu__link">Funkos</a>
+            </li>
+            <li class="submenu__item">
+              <a href="#" class="submenu__link">Remeras</a>
+            </li>
+            <li class="submenu__item">
+              <a href="#" class="submenu__link">Llaveros</a>
+            </li>
+          </ul>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="#">CONTACTO</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="./login.html">LOGIN</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__cart" href="../shop/cart.html">
+            <img src="../../img/icons/cart-icon.svg" alt="Icon Cart" />
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Fin Header -->
+
+  <!-- Inicio Main -->
+  <main class="content container">
+    <h3 class="content__title">CREAR NUEVO ITEM</h3>
+    <div class="content__filter">
+      <div class="content__list">
+        <label for="" class="content__category">Categoría:</label>
+        <select name="" id="" class="content__list--items_create">
+          <option value="" disabled selected>Seleccionar</option>
+        </select>
+      </div>
+      <div class="content__list">
+        <label for="" class="content__license">Licencia:</label>
+        <select name="" id="" class="content__list--items_create">
+          <option value="" disabled selected>Seleccionar</option>
+        </select>
+      </div>
+    </div>
+    <div class="product">
+      <label for="" class="product__name">Nombre del producto:</label>
+      <input class="product__name--text_create" type="text" value="Kakashi Hatake Shippuden Saga"/>
+    </div>
+    <textarea class="product__desctription--text_create" class="" name="" id="" cols="60" rows="10">Descripción del producto</textarea>
+    <div class="description-product">
+      <div>
+        <label class="description-product__sku" for="sku">SKU:</label>
+        <input
+          class="description-product__sku--text_create"
+          type="text"
+          id="sku"
+          name="sku"
+          value="SSK111AB001"
+        />
+      </div>
+      <div>
+        <label class="description-product__price" for="precio">Precio:</label>
+        <input
+          class="description-product__price--text_create"
+          type="text"
+          id="precio"
+          name="precio" value="$ 0.000,00"
+        />
+      </div>
+      <div>
+        <label class="description-product__stock" for="stock">Stock:</label>
+        <input
+          class="description-product__stock--text_create"
+          type="text"
+          id="stock"
+          name="stock" value="0"
+        />
+      </div>
+    </div>
+    <div class="promo">
+      <label class="promo__descuento" for="descuento">Descuento:</label>
+      <input
+        class="promo__descuento--text"
+        type="text"
+        id="descuento"
+        name="descuento"
+      />
+      <label class="promo__cuotas" for="cuotas">Cuotas:</label>
+      <select class="promo-cuotas--items" name="cuotas" id="cuotas">
+        <option class="promo__cuotas--item" value="">
+          3 cuotas sin interés
+        </option>
+        <option class="promo__cuotas--item" value="">
+          6 cuotas sin interés
+        </option>
+        <option class="promo__cuotas--item" value="">
+          12 cuotas sin interés
+        </option>
+      </select>
+    </div>
+
+    <div class="select-img">
+      <label class="select-img__text" for="">Imágenes:</label>
+      <input class="select-img__button" type="file" />
+    </div>
+    <div class="imagenes">
+      <picture class="cover">
+        <img class="cover-img" src="/img/harry-potter/harry-1.webp" alt="imagencharmonder-box-web" />
+        <figcaption class="cover__text">Frente</figcaption>
+      </picture>
+      <picture class="cover">
+        <img
+          class="cover-img"
+          src="/img/harry-potter/harry-box.webp"
+          alt="imagen star-wars bobbafeth"
+        />
+        <figcaption class="cover__text">Dorso</figcaption>
+      </picture>
+    </div>
+    <div>
+      <button class="button">Modificar Producto</button>
+    </div>
+  </main>
+  <!-- Fin Main -->
+
+  <!-- Inicio Footer -->
+  <footer class="footer">
+    <nav class="navbar container">
+      <ul class="navbar__items">
+        <li class="navbar__item">
+          <a class="navbar__link" href="../shop/shop.html">SHOP</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="/pages/admin/register.html">REGISTRARSE</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="./login.html">LOGIN</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="#">CONTACTO</a>
+        </li>
+      </ul>
+      <picture>
+        <a href="../../index.html">
+          <img src="../../img/branding/isotype.svg" alt="Isologotipo de la Marca Funkoshop - no frase" />
+        </a>
+      </picture>
+    </nav>
+    <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>
+  </footer>
+  <!-- Fin Footer -->
+</body>
+
+</html>
