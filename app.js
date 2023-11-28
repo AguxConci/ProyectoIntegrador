@@ -1,5 +1,9 @@
 const express = require ('express');
+const path = require('path')
 const app = express();
+
+servidor.set('view engine','ejs')
+servidor.set('views', path.join(__dirname, '/src/views'))
 
 //Importación de rutas
 const mainRoutes = require ('./src/routes/mainRoutes');
