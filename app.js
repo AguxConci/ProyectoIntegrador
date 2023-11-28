@@ -2,14 +2,14 @@ const express = require ('express');
 const path = require('path')
 const app = express();
 
-servidor.set('view engine','ejs')
-servidor.set('views', path.join(__dirname, '/src/views'))
+app.set('view engine','ejs');
+app.set('views', path.join(__dirname, '/src/views'));
 
 //Importación de rutas
 const mainRoutes = require ('./src/routes/mainRoutes');
-const shopRoutes = require('./src/router/shopRoutes');
-const adminRoutes = require('./src/router/adminRoutes');
-const { notFoundPage } = require('./src/utils/errorHandlers');
+const shopRoutes = require('./src/routes/shopRoutes');
+const adminRoutes = require('./src/routes/adminRoutes');
+const { notFoundPage } = require('./src/routes/errorHandlers');
 
 app.use(express.static('public'));
 
