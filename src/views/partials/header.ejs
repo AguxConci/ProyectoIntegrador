@@ -4,32 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= view.title %></title>
-    <link rel="stylesheet" href="/css/index.css">
+    <title></title>
 </head>
 <body>
-    <header class="page-header"> <!-- Inicio Header 
-        <% if (logeado) { %>
-            <nav class="navbar container">
-                <picture class="nabvar__logo">
-                    <a href="/">
-                        <img src="/img/branding/logo_light_horizontal.svg" alt="Isologotipo de la Marca Funkoshop">
-                    </a>
-                </picture>
-                <ul class="navbar__menu">
-                    <li class="navbar__item">
-                        <a class="navbar__link" href="/shop">VER TIENDA</a>
-                    </li>
-                    <li class="navbar__item">
-                        <a class="navbar__link" href="/admin">ADMIN</a>
-                    </li>
-                    <li class="navbar__item">
-                        <a class="navbar__link" href="/auth/logout">SALIR</a>
-                    </li>
-                </ul>
-            </nav>
-        <% } else {%> --> <!--SE MUESTRA UN SOLO HEADER HASTA QUE SE PUEDA VALIDAR SI ES USUARIO REGISTRADO
-                            PERO SE DEJA LOGICA PLANTEADA COMENTADA CON UN IF-->
+    <header class="page-header">
+   
             <nav class="navbar container">
                 <picture class="nabvar__logo">
                     <a href="/">
@@ -64,5 +43,5 @@
                     </li>
                 </ul>
             </nav>
-       <!--  <% } %> -->
+     
     </header> <!--   Fin Header -->

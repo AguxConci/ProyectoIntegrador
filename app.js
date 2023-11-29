@@ -3,13 +3,15 @@ const path = require('path')
 const app = express();
 
 app.set('view engine','ejs');
-app.set('views', path.join(__dirname, '/src/views'));
+app.set('views', path.join(__dirname + '/src/views/'));
 
 //Importación de rutas
 const mainRoutes = require ('./src/routes/mainRoutes');
 const shopRoutes = require('./src/routes/shopRoutes');
 const adminRoutes = require('./src/routes/adminRoutes');
+const authRoutes = require('./src/routes/authRoutes');
 const { notFoundPage } = require('./src/routes/errorHandlers');
+const authControllers = require('./src/controllers/authControllers');
 
 app.use(express.static('public'));
 
@@ -17,6 +19,7 @@ app.use(express.static('public'));
 app.use('/', mainRoutes);
 app.use('/shop', shopRoutes);
 app.use('/admin', adminRoutes);
+app.use('/auth', authRoutes)
 app.use(notFoundPage);
 
 
