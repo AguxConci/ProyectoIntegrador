@@ -1,6 +1,7 @@
 const express = require ('express');
-const path = require('path')
+const path = require('path');
 const app = express();
+
 
 app.set('view engine','ejs');
 app.set('views', path.join(__dirname + '/src/views/'));
@@ -11,16 +12,29 @@ const shopRoutes = require('./src/routes/shopRoutes');
 const adminRoutes = require('./src/routes/adminRoutes');
 const authRoutes = require('./src/routes/authRoutes');
 const { notFoundPage } = require('./src/routes/errorHandlers');
-const authControllers = require('./src/controllers/authControllers');
 
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'))
+
+//middlewares nativos para convertir data del body (POST) a un formato para servidor
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+//sobreescribe metodo post de formulario para usar PUT O DELETE
+const method = require('method-override');
+app.use(method('_method'));
+
+
+//para utilizar el .env requiero dependencia y leo la constante
+require('dotenv').config();
+const port = process.env.PORT || 3000
+
 
 //Rutas de mi aplicacion
 app.use('/', mainRoutes);
 app.use('/shop', shopRoutes);
 app.use('/admin', adminRoutes);
-app.use('/auth', authRoutes)
+app.use('/auth', authRoutes);
 app.use(notFoundPage);
 
 
-app.listen(4000, ()=> console.log("Servidor corriendo en http://localhost:4000"));
+app.listen(port, () => console.log(`Estoy funcionando en el puerto ${port}`))
