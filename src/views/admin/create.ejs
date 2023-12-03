@@ -3,6 +3,7 @@
   <!-- Inicio Main -->
   <main class="content container">
     <h3 class="content__title">CREAR NUEVO ITEM</h3>
+    <form class="create__form" action="/admin/create" method="POST" enctype="multipart/form-data">
     <div class="content__filter">
       <div class="content__list">
         <label for="" class="content__category">Categoría:</label>
@@ -76,25 +77,14 @@
 
     <div class="select-img">
       <label class="select-img__text" for="">Imágenes:</label>
-      <input class="select-img__button" type="file" />
+      <input class="select-img__button" type="file" name="imagenes" id="img" />
     </div>
     <div class="imagenes">
-      <picture class="cover">
-        <img class="cover-img" src="/img/harry-potter/harry-1.webp" alt="imagencharmonder-box-web" />
-        <figcaption class="cover__text">Frente</figcaption>
-      </picture>
-      <picture class="cover">
-        <img
-          class="cover-img"
-          src="/img/harry-potter/harry-box.webp"
-          alt="imagen star-wars bobbafeth"
-        />
-        <figcaption class="cover__text">Dorso</figcaption>
-      </picture>
+      <div class="form__flex">
+        <input class="form__btn btn btn--primary btn--large" type="submit" value="Agregar Producto">
+        <input class="form__btn btn btn--primary btn--large" type="reset" value="Limpiar">
     </div>
-    <div>
-      <button class="button">Modificar Producto</button>
-    </div>
+    </form>
   </main>
   <!-- Fin Main -->
 
