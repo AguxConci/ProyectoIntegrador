@@ -94,7 +94,7 @@ img {
 /* Header */
 
 header {
-  background-color: var(--dark-bg-solid);
+  background-color: var(--dark-bg-solid); 
   padding: var(--spacing-36);
 }
 
