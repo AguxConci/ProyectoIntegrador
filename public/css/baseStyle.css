@@ -107,7 +107,8 @@ header {
 .navbar__logo {
   max-width: 300px;
 }
-.navbar_menu {
+
+.navbar__menu {
   display: flex;
   align-items: center;
   gap: var(--spacing-20);
