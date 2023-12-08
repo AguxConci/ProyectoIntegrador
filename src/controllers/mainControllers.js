@@ -10,9 +10,9 @@ const mainControllers = {
       collections: licences.data,
     });
   },
-  contact:(req, res) =>  res.send('Contact View Route' , {title : "Contacto"}),
-  about:(req, res) =>  res.send('About View Route', {title : "About"}),
-  faqs:(req, res)  => res.send('FAQs View Route', {title : "Faqs"}),
+  contact:(req, res) =>  res.send('Contact View Route' ,{view: {title : "Contacto"}}),
+  about:(req, res) =>  res.send('About View Route', {view: {title : "About"}}),
+  faqs:(req, res)  => res.send('FAQs View Route', {view: {title : "Faqs"}}),
 };
 
 module.exports = mainControllers;

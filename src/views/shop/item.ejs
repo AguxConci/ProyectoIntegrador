@@ -7,13 +7,33 @@
       <section id="item__shop" class="item container">
       </section>
       <!-- SLIDER -->
+      <section class="item">
+      <picture class="item__img card-item__cover">
+        <img class="card-item__img--front" src="../../img<%= item.image_front %>" alt="<%= item.product_description %>">
+        <img class="card-item__img--back" src="../../img<%= item.image_back %>" alt="<%= item.product_description %>">
+    </picture>
+    <article class="item__info">
+        <p class="item__licence"><%= item.licence_name %></p>
+        <h3 class="item__name"><%= item.product_name %></h3>
+        <p class="item__description"><%= item.product_description %></p>
+        <p class="item__price"><%= item.price %></p>
+        <form class="item__cart" action="#" method="POST" enctype="application/x-www-form-urlencoded">
+            <button id="subtract" class="item__quantity" type="button">-</button>
+            <input id="quantity" class="item__input" type="text" name="quantity" placeholder="0">
+            <button id="add" class="item__quantity" type="button">+</button>
+            <button class="item__submit btn btn--primary btn--medium" type="submit">Agregar al carrito</button>
+        </form>
+        </article>
+        </section>
+        <p class="item__promo"><a href="">Ver métodos de pago</a> - 3 CUOTAS SIN INTERÉS</p>
+    </article>
       <section class="slider container glide">
         <h2 class="slider__title">productos relacionados</h2>
         <div class="glide__track" data-glide-el="track">
           <ul class="slider__items glide__slides">
             <li class="slider__item glide__slide">
               <article class="card-item">
-                <a id="funko_1" class="card-item__link" href="/pages/shop/item.html">
+                <a id="funko_1" class="card-item__link" href="">
                   <picture class="card-item__cover">
                     <span class="card-item__tag">Nuevo</span>
                     <img
@@ -38,7 +58,7 @@
             </li>
             <li class="slider__item glide__slide">
               <article class="card-item">
-                <a id="funko_2" class="card-item__link" href="/pages/shop/item.html">
+                <a id="funko_2" class="card-item__link" href="">
                   <picture class="card-item__cover">
                     <span class="card-item__tag">Nuevo</span>
                     <img
@@ -63,7 +83,7 @@
             </li>
             <li class="slider__item glide__slide">
               <article class="card-item">
-                <a id="funko_3" class="card-item__link" href="/pages/shop/item.html">
+                <a id="funko_3" class="card-item__link" href="">
                   <picture class="card-item__cover">
                     <span class="card-item__tag">Nuevo</span>
                     <img
