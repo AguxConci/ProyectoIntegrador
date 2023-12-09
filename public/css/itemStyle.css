@@ -92,3 +92,41 @@
   color: var(--secondary-solid);
   font-weight: 700;
 }
+
+
+#button {
+  width: 181px;
+  height: 37.91px;
+  top: 565.57px;
+  left: 888.33px;
+  background-color:  #FF3333;
+  color: #FFFFFF;
+
+}
+
+#button:hover {
+  cursor: pointer;
+  background-color: var(--dark-bg-solid);
+}
+
+.item__quantity{
+width: Fixed (18px);
+height: Fixed (16px);
+top: 565.14px;
+left: 841px;
+padding: 4px;
+background-color: #4F4F4F;
+color: #FFFFFF;
+margin: 5px;
+}
+
+.item__input{
+width: 105.47px;
+height: 35.24px;
+top: 565.95px;
+left: 726.75px;
+text-align: center;
+color: linear-gradient(0deg, #C9C9C9, #C9C9C9),
+linear-gradient(0deg, #FFFFFF, #FFFFFF);
+border: 0.5px solid #C9C9C9;
+}
