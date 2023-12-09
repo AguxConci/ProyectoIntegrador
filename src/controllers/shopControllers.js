@@ -28,7 +28,6 @@ const shopControllers = {
          title: "Item | Funkoshop"
        },
        item: data[0],
-       enableGlide: true,
     });
   },
     addItemToCart: (req, res) => res.render('./shop/cart', {view: {title : "Add Item"}}),

@@ -1,10 +1,26 @@
 const express = require ('express');
 const path = require('path');
 const app = express();
+const session = require('express-session');
 
 
 app.set('view engine','ejs');
 app.set('views', path.join(__dirname + '/src/views/'));
+
+//sesion activa en todas partes mientras el servidor corre (mas seguro esta del lado del servidor)
+app.use(session({
+	secret: "S3cr3t01H@sh",
+	resave: false,
+	saveUninitialized: false,
+}))
+
+//para bloquear la ruta admin si no esta logueado
+const isLogged = (req, res, next) =>{
+	if (!req.session.userid){
+		return res.redirect('/auth/login')
+	} next()
+}
+
 
 //Importación de rutas
 const mainRoutes = require ('./src/routes/mainRoutes');
@@ -32,7 +48,7 @@ const port = process.env.PORT || 3000
 //Rutas de mi aplicacion
 app.use('/', mainRoutes);
 app.use('/shop', shopRoutes);
-app.use('/admin', adminRoutes);
+app.use('/admin', isLogged, adminRoutes);
 app.use('/auth', authRoutes);
 app.use(notFoundPage);
 

@@ -1,8 +1,9 @@
 const modelsProduct = require ('../models/product.js')
 
+
 const adminControllers = {
     adminView: async (req, res) => {
-      const { data } = await modelsProduct.getAllItems();
+      const { data } = await modelsProduct.getAll();
       res.render( './admin/admin',
       {
         view: {
@@ -21,7 +22,7 @@ const adminControllers = {
           title: 'Create Product | Admin Funkoshop'
         },
         categories,
-        licences
+        licences,
       });
     },
 

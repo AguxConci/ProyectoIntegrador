@@ -12,6 +12,7 @@ const storage = multer.diskStorage({
 })//crea instancia multer y asigna configuracion creada
 const uploadFile = multer({storage})
 
+
 router.get('/', adminControllers.adminView);
 router.get('/create', adminControllers.createView);
 router.post('/create',uploadFile.array('imagenes', 2) ,adminControllers.createItem);
